@@ -52,7 +52,8 @@ from sakila.film as f
 join sakila.inventory as i on f.film_id = i.film_id
 join sakila.rental as r on i.inventory_id = r.inventory_id
 group by f.title
-order by count desc;
+order by count desc
+limit 10;
 
 -- 7. Determine if "Academy Dinosaur" can be rented from Store 1.
 
